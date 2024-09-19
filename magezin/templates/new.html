@@ -1,0 +1,119 @@
+{% extends './base.html' %}
+
+
+
+{% block content %}
+
+<div class="alll">
+    
+<form action="" method="post">
+    {% csrf_token %}
+    <p>
+       
+        <input type="text" name="title" maxlength="100" required id="id_title" placeholder="عنوان" class="titlee" required>
+        
+        
+      </p>
+    
+      
+      <p>
+        
+        <textarea name="body" cols="40" rows="10" required id="id_body" placeholder="متن توییت" class="bodyy" required>
+    </textarea>
+        
+        
+      </p>
+    
+      
+      <p >
+        <label for="id_status">وضعیت:</label>
+        <select name="status" id="id_status" class="status">
+      <option value="draft" selected>پیشنویس</option>
+    
+      <option value="send">ارسال</option>
+    
+    </select>
+        
+        
+          
+        
+      </p>
+       
+        <input type="submit" value="ثبت" class='btn btn-primary' id="btnn">
+    
+</form>
+<div class="contain">
+    <h3 style="margin-bottom: 30px;">به راحتی توییت خودتون رو منتشر کنید!</h3>
+
+    <h4>بعد از ثبت کردن محتوا منتظر بمانید تا توییت شما توسط<br> ادمین ها تایید شود. این فرایند خیلی سریع انجام میشود.</h4>
+    <h5><a href="{% url 'home' %}">بازگشت</a></h5>
+</div>
+</div>
+
+
+<style>
+    form{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+        
+    }
+    .titlee{
+        width: 34em;
+        border-radius: 9px;
+        border: 2px solid blue;
+        direction: rtl;
+        padding: 6px;
+        background-color: rgba(22, 146, 218, 0.705);
+        color: white;
+        
+    }
+    .bodyy{
+        width: 34em;
+        border-radius: 9px;
+        border: 2px solid blue;
+        direction: rtl;
+        margin-top: 10px;
+        padding: 6px;
+        background-color: rgba(22, 146, 218, 0.705);
+        color: white;
+    }
+    #btnn{
+        width: 400px;
+        margin-top: 15px;
+    }
+    .status{
+       width: 200px;
+       text-align: center;
+       
+    }
+    body{
+        background-color: rgba(22, 146, 218, 0.705);
+    }
+    .contain{
+        direction: rtl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(0, 0, 138);
+        width: fit-content;
+        height: fit-content;
+        color: rgb(233, 233, 233);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow:  3px 1px 3px rgba(0, 0, 0, 0.514);
+        margin-top: 5em;
+        margin-left: 4em;
+    }
+    .alll{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        margin-top: 80px;
+    }
+
+</style>
+{% endblock content %}

@@ -1,0 +1,82 @@
+{% extends './base.html' %}
+
+
+{% block content %}
+<h3>توییت خودتوادیت بزن</h3>
+
+<br>
+<form action="" method="post" class="my-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    
+   
+    <input type="submit" value="ویرایش" class="btn btn-primary">
+    <button class="btn btn-secondary"><a href="{% url 'mypost' %}">بازگشت</a></button>
+</form>
+
+
+<style>
+    body{
+       background-color: rgb(74, 214, 219); 
+    }
+    .my-form{
+        background-color: rgb(34, 211, 143);
+        border-radius: 15px;
+        border: 1px solid black;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        direction: rtl;
+        box-shadow: 1px 0 2px 3px rgba(156, 156, 156, 0.315);
+
+    }
+    #id_title{
+        width: 16em;
+        border-radius: 10px;
+        border: 1px solid rgb(1, 68, 1);
+        background-color: rgb(34, 211, 143);
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+    #id_title:focus{
+        box-shadow: 0 0 2em white;
+    }
+    #id_body{
+        width: 26em;
+        border-radius: 10px;
+        border: 1px solid rgb(1, 68, 1);
+        background-color: rgb(34, 211, 143);
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+    #id_body:focus{
+        box-shadow: 0 0 2em white;
+    }
+    label{
+        color: rgb(202, 28, 28);
+    }
+    #id_status{
+        width: 15em;
+        border-radius: 12px;
+        padding: 3px;
+        transition-duration: 0.5s;
+        border: 1px solid rgb(1, 68, 1);
+        background-color: rgb(34, 211, 143);
+        
+    }
+    #id_status:hover{
+        box-shadow: 0 0 2em white;
+
+    }
+    a:link{
+            color: white;
+        }
+    a:visited{
+            color : white;
+        }
+    a{
+        text-decoration: none;
+    }    
+
+</style>
+{% endblock content %}

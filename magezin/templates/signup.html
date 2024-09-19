@@ -1,0 +1,108 @@
+{% extends './base.html' %}
+
+
+{% block content %}
+
+
+<br>
+<form action="{% url 'signup' %}" method="POST">{% csrf_token %}
+    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+        <div class="container py-5 h-100" style="direction: rtl;">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card rounded-3">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                  class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                  alt="Sample photo">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">خیلی سریع ثبت نام کن!</h3>
+      
+                  <form class="px-md-2">
+      
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="form3Example1q" class="form-control" name="first_name"  placeholder="نام خود ذا وارد کنید" maxlength="60" required id="id_first_name"/>
+                      <input type="text" id="form3Example1q" class="form-control"  name="last_name" class="first-name" placeholder="نام خانوادگی خود ذا وارد کنید" maxlength="60" required id="id_last_name"/>
+                     
+                     
+                     
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <input type="text" id="form3Example1q" class="form-control"name="username" class="first-name" placeholder="نام کاربری خود ذا وارد کنید" required maxlength="20" autofocus id="id_username"/>
+      
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+        
+                          <input type="email" id="form3Example1q" class="form-control"name="email" class="first-name" placeholder="ایمیل خود را وارد کنید" required maxlength="50" autofocus id="id_email"/>
+        
+                        </div>
+                      <div class="col-md-6 mb-4">
+      
+                       
+      
+                      </div>
+                    </div>
+      
+                    <div class="mb-4">
+      
+                      
+      
+                    </div>
+      
+                    <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                      <div class="col-md-6">
+                        <input type="password" id="form3Example1q" class="form-control" name="password1" class="first-name" placeholder="رمز خود را وارد کنید" name="password" maxlength="50" required id="id_password1"/>
+                        <input type="password" id="form3Example1q" class="form-control"  name="password2" class="first-name" placeholder="مجدد رمز خود را وارد کنید" name="password" maxlength="50" required id="id_password2"/>
+      
+                       
+      
+                      </div>
+                    </div>
+      
+                    <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-lg mb-1">ثبت  نام</button>
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary btn-lg mb-1"><a href="{% url 'home' %}" style="text-decoration:none;">بازگشت</a></button>
+      
+                  </form>
+      
+                </div>
+                <style>
+                    a:visited{
+                        color: white;
+                    }
+                    a:link{
+                        color: white;
+                    }
+                    
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   
+</form>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

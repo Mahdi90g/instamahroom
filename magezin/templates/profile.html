@@ -1,0 +1,107 @@
+{% extends './base.html' %}
+
+
+{% block content %}
+<div class="cony">
+    <form method="post" class='my-form' style="direction: rtl; margin-right:200px;">{% csrf_token %}
+           <p>
+    <label for="id_first_name">نام:</label>
+    <input type="text" name="first_name" value="{{user.first_name}}" maxlength="150" id="id_first_name" class="inp">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_last_name">نام خانوادگی:</label>
+    <input type="text" name="last_name" value="{{user.last_name}}" maxlength="150" id="id_last_name" class="inp">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_username">نام کاربری:</label>
+    <input type="text" name="username" value="{{user.username}}" maxlength="150" required id="id_username" class="inp">
+    
+      <span class="helptext">الزامی. 150 کاراکتر یا کمتر. فقط شامل حروف، اعداد، و علامات @/./+/-/_</span>
+    
+    
+      
+    
+  </p>
+
+        <input type="submit" value="ویرایش" class="btn btn-primary">
+        <button class="btn btn-danger"><a href="{% url 'changepass' %}">تغییر کلمه ی عبور</a></button>
+
+        
+
+    </form>
+    
+     
+    </form>
+</div>
+   
+    
+   
+
+
+
+    <style>
+        .my-form{
+            margin-top: 200px;
+            position: relative;
+            background-color: rgb(3, 70, 44);
+            padding: 20px;
+            margin-right: -300px;
+            color: white;
+            border-radius: 15px;
+            border: 1px solid black;
+         
+           
+        }
+        .list{
+            position: absolute;
+           
+            left: 10px;
+            bottom: 48px;
+            padding: 10px;
+
+        }
+        body{
+            background-color: rgb(52, 150, 120);
+        }
+        .list li{
+            padding-top: 10px;
+            font-size: large;
+        }
+        .inp{
+            width: 340px;
+            border-radius: 10px;
+            border: none;
+            border-bottom: 2px solid rgb(0, 128, 79);
+            background-color:rgb(3, 70, 44); 
+            margin-top: 10px;
+            color: rgb(155, 155, 240);
+            font-size: large;
+        }
+        .inp:focus{
+            border: none;
+        }
+        a:link{
+            color: white;
+        }
+        a:visited{
+            color : white;
+        }
+       
+    </style>
+
+
+
+
+       
+    
+
+{% endblock content %}
+    
