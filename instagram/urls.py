@@ -23,5 +23,5 @@ from django.contrib.auth import views as a
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('magezin.urls')),
-    path('comment/', include('comment.urls')),
+   
 ]
