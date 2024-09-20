@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericRelation
 
-from comment.models import Comment
+
 # Create your models here.
 
 
@@ -26,7 +26,7 @@ class magezin(models.Model):
         
     )
     conformation=models.CharField(choices=conformation_choice,max_length=200,null=True,blank=True,default=None)
-    comments = GenericRelation(Comment)
+   
    
    
 
